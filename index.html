@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IT Company Departments</title>
+    <!-- Include Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Stylesheet -->
+    <style>
+      /* Reset default margins and paddings */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+          sans-serif;
+        color: #333;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      /* Header */
+      header {
+        background-color: #4a90e2;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      header i {
+        margin-right: 10px;
+        font-size: 24px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      /* Main content area */
+      .container {
+        display: flex;
+        flex: 1;
+      }
+
+      /* Sidebar navigation */
+      nav {
+        width: 250px;
+        background-color: #2c3e50;
+        color: #fff;
+        padding-top: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav li {
+        padding: 15px 20px;
+        cursor: pointer;
+      }
+
+      nav li:hover,
+      nav li.active {
+        background-color: #1a252f;
+      }
+
+      nav li i {
+        margin-right: 10px;
+      }
+
+      /* Content area */
+      main {
+        flex: 1;
+        padding: 40px;
+        background-color: #f9fafb;
+        overflow-y: auto;
+      }
+
+      main section {
+        display: none;
+      }
+
+      main section.active {
+        display: block;
+      }
+
+      main h2 {
+        color: #4a90e2;
+        margin-bottom: 20px;
+      }
+
+      main h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      main p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      main ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+
+      main ul li {
+        list-style-type: disc;
+        margin-bottom: 5px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #4a90e2;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer p {
+        margin-right: 10px;
+      }
+
+      footer i {
+        margin: 0 5px;
+        font-size: 18px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        nav {
+          width: 200px;
+        }
+
+        header h1 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with icon -->
+    <header>
+      <i class="fas fa-building"></i>
+      <h1>IT Company Departments</h1>
+    </header>
+
+    <div class="container">
+      <!-- Sidebar navigation -->
+      <nav>
+        <ul>
+          <li
+            class="active"
+            data-tab="development"
+          >
+            <i class="fas fa-code"></i> Development
+          </li>
+          <li data-tab="qa">
+            <i class="fas fa-vial"></i> QA
+          </li>
+          <li data-tab="business-analysis">
+            <i class="fas fa-chart-line"></i> Business
+            Analysis
+          </li>
+          <li data-tab="project-management">
+            <i class="fas fa-tasks"></i> Project Management
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main content area -->
+      <main>
+        <!-- Development Section -->
+        <section
+          id="development"
+          class="active"
+        >
+          <h2>Development Department</h2>
+          <p>
+            The Development department is responsible for
+            designing, coding, and maintaining software
+            applications that meet client requirements and
+            industry standards.
+          </p>
+
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Software design and architecture</li>
+            <li>Writing clean, efficient code</li>
+            <li>
+              Integrating software components and
+              third-party APIs
+            </li>
+            <li>Testing and debugging applications</li>
+            <li>
+              Collaborating with cross-functional teams
+            </li>
+          </ul>
+
+          <h3>Roles in Development:</h3>
+          <ul>
+            <li>Front-end Developers</li>
+            <li>Back-end Developers</li>
+            <li>Full-stack Developers</li>
+            <li>Mobile App Developers</li>
+            <li>DevOps Engineers</li>
+          </ul>
+        </section>
+
+        <!-- QA Section -->
+        <section id="qa">
+          <h2>Quality Assurance (QA) Department</h2>
+          <p>
+            The QA department ensures that software products
+            meet quality standards before release. They play
+            a critical role in identifying defects and
+            improving product reliability.
+          </p>
+
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>
+              Developing and executing test plans and test
+              cases
+            </li>
+            <li>
+              Identifying, documenting, and tracking
+              software defects
+            </li>
+            <li>
+              Performing regression and performance testing
+            </li>
+            <li>
+              Ensuring compliance with industry standards
+              and regulations
+            </li>
+            <li>
+              Collaborating with development teams to
+              resolve issues
+            </li>
+          </ul>
+
+          <h3>Roles in QA:</h3>
+          <ul>
+            <li>QA Analysts</li>
+            <li>QA Engineers</li>
+            <li>Automation Testers</li>
+            <li>Performance Testers</li>
+            <li>QA Managers</li>
+          </ul>
+        </section>
+
+        <!-- Business Analysis Section -->
+        <section id="business-analysis">
+          <h2>Business Analysis Department</h2>
+          <p>
+            The Business Analysis department acts as a
+            bridge between clients and technical teams,
+            identifying business needs and determining
+            solutions to business problems.
+          </p>
+
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>
+              Gathering and documenting business
+              requirements
+            </li>
+            <li>
+              Conducting feasibility and risk assessments
+            </li>
+            <li>
+              Analyzing and modeling business processes
+            </li>
+            <li>
+              Facilitating communication between
+              stakeholders
+            </li>
+            <li>
+              Assisting in the design and implementation of
+              solutions
+            </li>
+          </ul>
+
+          <h3>Roles in Business Analysis:</h3>
+          <ul>
+            <li>Business Analysts</li>
+            <li>Systems Analysts</li>
+            <li>Requirements Analysts</li>
+            <li>Product Owners</li>
+            <li>Business Consultants</li>
+          </ul>
+        </section>
+
+        <!-- Project Management Section -->
+        <section id="project-management">
+          <h2>Project Management Department</h2>
+          <p>
+            The Project Management department oversees
+            projects from initiation to completion, ensuring
+            they are delivered on time, within scope, and
+            within budget.
+          </p>
+
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>
+              Defining project scope, goals, and
+              deliverables
+            </li>
+            <li>
+              Developing detailed project plans and
+              schedules
+            </li>
+            <li>Resource planning and allocation</li>
+            <li>Risk management and mitigation</li>
+            <li>Monitoring progress and performance</li>
+            <li>Stakeholder communication and reporting</li>
+          </ul>
+
+          <h3>Roles in Project Management:</h3>
+          <ul>
+            <li>Project Managers</li>
+            <li>Scrum Masters</li>
+            <li>Program Managers</li>
+            <li>Project Coordinators</li>
+            <li>PMO Analysts</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer with icons -->
+    <footer>
+      <p>Connect with us:</p>
+      <a
+        href="#"
+        style="color: #fff"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a
+        href="#"
+        style="color: #fff"
+        ><i class="fab fa-twitter-square"></i
+      ></a>
+      <a
+        href="#"
+        style="color: #fff"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </footer>
+
+    <!-- Widget integration at the end of the body -->
+    <div
+      class="simplyask-agent-widget"
+      data-iva-agent-id="b4737464-9298-4f85-a0c6-ad1759049ad0"
+      data-widget-id="1e35bf17-86b2-485a-9bb9-d6d9873df786"
+    ></div>
+
+    <!-- Include the widget script here for SSR applications -->
+    <script
+      async
+      src="https://cdn.simplyask.ai/widget/widget-qa1.js"
+    ></script>
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+      const navItems =
+        document.querySelectorAll('nav ul li');
+      const sections =
+        document.querySelectorAll('main section');
+
+      navItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          // Remove active class from all nav items
+          navItems.forEach((nav) =>
+            nav.classList.remove('active')
+          );
+          // Add active class to the clicked nav item
+          item.classList.add('active');
+
+          // Hide all sections
+          sections.forEach((section) =>
+            section.classList.remove('active')
+          );
+          // Show the clicked section
+          const activeSection = document.getElementById(
+            item.getAttribute('data-tab')
+          );
+          activeSection.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>
